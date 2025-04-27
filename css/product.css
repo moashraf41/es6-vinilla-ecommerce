@@ -1,0 +1,140 @@
+:root {
+  --primary-color: black;
+  --accent-color: #f9a826;
+  --text-color: #222;
+  --bg-color: #f1f1f0;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --primary-color: #fff;
+  --accent-color: #f9a826;
+  --text-color: #eee;
+  --shadow: 0 8px 20px rgb(255, 255, 255);
+}
+
+/* General */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-color) !important;
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--text-color) !important;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-item:hover:not(.icon) {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: var(--accent-color) !important;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Toggle Class */
+.nav-links.show {
+  display: block !important;
+}
+
+@media (max-width: 991.98px) {
+  #navbarNav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bg-color);
+    padding: 20px 0;
+    text-align: center;
+    z-index: 999;
+  }
+}
+.product-info,
+.reviews-container {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Navbar */
+
+/* Product Image */
+.prod-img {
+  background: linear-gradient(135deg, #ece6d6, #eee9db) !important;
+  transition: background-color 0.3s ease;
+}
+
+/* Product Info */
+.text-main {
+  color: var(--primary-color) !important;
+}
+
+.text-muted {
+  color: var(--text-color) !important;
+}
+
+.text-success {
+  color: var(--accent-color) !important;
+}
+
+.del {
+  color: var(--text-color) !important;
+  text-decoration: line-through;
+}
+
+/* Button */
+.addCart {
+  background-color: var(--accent-color) !important;
+  color: #fff !important;
+}
+
+.addCart:disabled {
+  background-color: #ccc !important;
+  color: #6c757d !important;
+}
+
+/* Reviews Section */
+.reviews-container {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  box-shadow: var(--shadow);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .prod-img {
+    max-height: 300px !important;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,23 @@
+.checkout-form {
+  border-radius: 15px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.checkout-form input {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  transition: 0.3s;
+}
+
+.checkout-form input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(249, 168, 38, 0.25);
+}
+
+.btn-success {
+  border-radius: 12px;
+  font-weight: bold;
+}

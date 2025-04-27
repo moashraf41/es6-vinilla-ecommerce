@@ -1,0 +1,120 @@
+:root {
+  --primary-color: black;
+  --accent-color: #f9a826;
+  --text-color: #222;
+  --bg-color: #f1f1f0;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --primary-color: #fff;
+  --accent-color: #f9a826;
+  --text-color: #eee;
+  --shadow: 0 8px 20px rgb(255, 255, 255);
+}
+
+/* General */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-color) !important;
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--text-color) !important;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-item:hover:not(.icon) {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+  color: var(--accent-color) !important;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Toggle Class */
+.nav-links.show {
+  display: block !important;
+}
+
+@media (max-width: 991.98px) {
+  #navbarNav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bg-color);
+    padding: 20px 0;
+    text-align: center;
+    z-index: 999;
+  }
+}
+.heading {
+  font-weight: 500;
+  text-align: center;
+}
+.cart-item {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.01);
+}
+
+.cart-summary {
+  border-radius: 15px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.quantity-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  padding: 0;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.empty-cart img {
+  width: 600px;
+  height: 400px;
+}

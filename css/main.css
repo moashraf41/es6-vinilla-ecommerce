@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Light Theme Variables */
+:root {
+  --primary-color: black;
+  --accent-color: #f9a826;
+  --text-color: #222;
+  --bg-color: #f1f1f0;
+  --card-bg: linear-gradient(135deg, #c5d6de, #ebe1c3);
+  --card-color: #222;
+  --footer-bg: #222;
+  --footer-text: #ccc;
+  --footer-hover: #fff;
+  --price-badge-bg: #000;
+  --btn-bg: #000;
+  --btn-hover: #333;
+  --btn-text: #fff;
+  --border-radius: 12px;
+  --input-border: #ddd;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Theme Overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --card-bg: linear-gradient(135deg, #637c96, #74a7da);
+  --card-color: #fff;
+  --footer-bg: #000;
+  --footer-text: #aaa;
+  --footer-hover: #fff;
+  --price-badge-bg: #000;
+  --btn-bg: #000;
+  --btn-hover: #333;
+  --btn-text: #fff;
+  --shadow: 0 8px 20px rgb(255, 255, 255);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-color) !important;
+  box-shadow: var(--shadow);
+}
+
+.navbar-nav .nav-item:hover:not(.icon) {
+  background-color: var(--btn-hover) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--footer-text) !important;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--accent-color) !important;
+}
+
+/* Cards */
+.styled-card {
+  border-radius: 64px 25px 125px 25px;
+  background: var(--card-bg);
+  color: var(--card-color);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 430px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.styled-card:hover {
+  transform: translateY(-5px);
+}
+
+.rating-stars i {
+  font-size: 0.9rem;
+}
+
+.product-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-top: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 2px solid #000;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 239, 204, 0.4),
+    rgba(243, 228, 199, 0.5)
+  );
+}
+
+/* Price + Button */
+.price-badge {
+  background-color: var(--price-badge-bg);
+  color: var(--btn-text);
+  font-weight: bold;
+  padding: 6px 12px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+.card-text {
+  color: var(--text-color);
+}
+
+.shop-now-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.shop-now-btn:hover {
+  background-color: var(--btn-hover);
+  color: var(--btn-text);
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+footer p,
+footer li,
+footer a {
+  color: var(--footer-text);
+  font-size: 14px;
+}
+
+footer a:hover {
+  color: var(--footer-hover);
+  text-decoration: underline;
+}
+
+footer .fab {
+  transition: 0.3s ease;
+}
+
+footer .fab:hover {
+  color: var(--footer-hover);
+  transform: scale(1.2);
+}
+
+footer hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+footer small {
+  color: #888;
+}
+
+#backToTopBtn {
+  bottom: -60px;
+  right: 30px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #212529;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+#backToTopBtn.show {
+  bottom: 40px;
+  opacity: 1;
+}
+
+#backToTopBtn:hover {
+  background: #343a40;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+#backToTopBtn i {
+  font-size: 1.4rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-top: -2px;
+}
+
+#backToTopBtn:active {
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+}
+
+/* Dark mode styles */
+.dark-mode #backToTopBtn {
+  background: #3a3a3a;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode #backToTopBtn:hover {
+  background: #4d4d4d;
+}
